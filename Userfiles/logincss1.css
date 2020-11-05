@@ -1,0 +1,105 @@
+.menuitems{
+	margin-right:20px;
+	margin-top:25px;
+	float:right;
+	content-align:center;
+	text-align:center;
+	font-family: "Lucida Console", Courier, monospace;
+	text-style:normal;
+	padding:8px;
+	border-radius:6px;
+	background:dodgerblue;
+}
+nav{
+	display:flow-root;
+	content-align:center;
+	text-align:center;
+}
+body{
+	
+	font-family:sans-serif;
+	background-image:url("user_home2.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+fieldset{
+		position:absolute;
+        left:calc(50% - 40px);
+        top:400px;
+		width:440px;
+		height:540px;	
+		border-radius:7px;
+		box-shadow:5px 10px 20px 5px;
+        transform: translate(-50%,-50%);	
+		background-color:lightyellow;
+		overflow-y:scroll;
+}
+
+legend{
+	font-size:30px;
+	font-family:sans-serif;
+	background-color:dodgerblue;
+	border-radius:7px;
+	padding:10px;
+
+}
+.but{
+	background-color:blue;
+	border:none;
+	padding:10px;
+	border-radius:7px;
+	width:100px;
+	margin:0;
+	margin-bottom:20px;
+	margin-top:25px;
+}
+input{
+	
+	display:inline;
+	margin:15px;
+	padding:5px;
+	
+	border:0.5px solid black;
+	border-radius:3px;
+	background-color:rgba(255,255,255,0.1);
+	
+}
+a{
+	text-decoration:none;
+	color:green;
+	font-weight:bold;
+}
+p{
+	display:inline;
+	font-weight:bold;
+}
+
+.box{
+	padding:40px 30px 70px 30px;
+	overflow-y:scroll;
+	height:100%;
+}
+.box::-webkit-scrollbar {
+    display: none;
+}
+
+fieldset::-webkit-scrollbar {
+    display: none;
+}
+
+.box input[type="text"],[type="email"],[type="password"],[type="number"]::-webkit-input-placeholder {
+    text-align:center;
+}
+.box input[type="submit"],[type="reset"]{
+	
+	background:#1c8adb;
+	border:none;
+	width:110px;
+	height:35px;
+	margin-top:20px;
+	margin-left:10px;
+	margin-right:10px;
+	border-radius:20px;
+	float:left;
+	display:inline;
+}

@@ -1,0 +1,79 @@
+.menuitems{
+	margin-right:20px;
+	margin-top:25px;
+	float:right;
+	content-align:center;
+	text-align:center;
+	font-family: "Lucida Console", Courier, monospace;
+	text-style:normal;
+	padding:8px;
+	border-radius:6px;
+	background:dodgerblue;
+}
+nav{
+	display:flow-root;
+	content-align:center;
+	text-align:center;
+}
+body{
+	
+	font-family:sans-serif;
+	background-image:url("user_home2.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+fieldset{
+	background-color:lightyellow;
+	width:440px;
+	height:340px;
+	left:50px;
+	top:-20px;
+	position:absolute;
+	padding-top:20px;
+	margin-left:450px;
+	margin-top:180px;
+	border:2px solid green;
+	border-radius:7px;
+	box-shadow:5px 10px 20px 5px;
+}
+legend{
+	
+	font-size:30px;
+	font-family:sans-serif;
+	background-color:dodgerblue;
+	border-radius:7px;
+	padding:10px;
+	
+}
+.but{
+	background-color:blue;
+	border:none;
+	padding:10px;
+	border-radius:7px;
+	width:100px;
+	margin:0;
+	margin-bottom:20px;
+	margin-top:25px;
+}
+input{
+	
+	display:inline;
+	margin:15px;
+	padding:5px;
+	
+	border:0.5px solid black;
+	border-radius:3px;
+	background-color:rgba(255,255,255,0.1);
+	
+}
+a{
+	text-decoration:none;
+	
+	color:green;
+	font-weight:bold;
+}
+p{
+	display:inline;
+	
+	font-weight:bold;
+}

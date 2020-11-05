@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Registration Form</title>
+<link href="logincss1.css" rel="stylesheet">
+<script type="text/javascript" language="javascript">
+function validate()
+{
+  var Name = /^[A-Za-z]+$/;
+  var Num=/^[0-9]+$/;
+  var id = /^[a-z0-9@.]+$/;
+  if(document.f1.u_name.value=="")
+  {
+    document.f1.u_name.focus();
+    alert("You must enter UserName");
+    return false;
+  }
+  else if(document.f1.u_name.value.length<6)
+  {
+    document.f1.u_name.focus();
+    alert("UserName Must minimum 6 Characters");
+    return false;
+  }
+  else if( !(document.f1.u_name.value.match(Name)) )
+  {
+    document.f1.u_name.focus();
+    alert("UserName Must Alphabet Characters");
+    return false;
+  }
+  
+  else if(document.f1.pwd.value.length<6)
+  {
+    document.f1.pwd.focus();
+    alert("Password Must minimum 6 Characters");
+    return false;
+  }
+  
+  else if( (document.f1.pwd.value)!=(document.f1.cpwd.value))
+  {
+    document.f1.pwd.focus();
+    alert("Password Not Matched");
+    return false;
+  }
+  else if(!(document.f1.email.value.match(id)) )
+  {
+    document.f1.email.focus();
+    alert("email Must not be captial Characters");
+    return false;
+  }
+  
+
+ else if(document.f1.ph.value.length!=10)
+  {
+    document.f1.ph.focus();
+    alert("phone number has Must 10 Characters");
+    return false;
+  }
+
+else if(!(document.f1.ph.value.match(Num)) )
+  {
+    document.f1.ph.focus();
+    alert("phone number Must not be Alphabet Characters");
+    return false;
+  }
+else if(document.getElementById("male").checked!= true &&document.getElementById("female").checked!= true)
+  {
+    document.getElementById("male").focus();
+    return false;
+  }
+
+  else
+  {
+   alert("Success..!");
+   return true;
+  }
+}
+</script>
+
+
+
+
+</head>
+
+<body>
+<div style="background:#F1FCFB;">
+
+<nav>
+<a style="float:left;"><img src="assets/logo.png" alt="Logo" width="150" height="60" style="display:inline;margin:auto;padding: 12px;"></a>
+<a class="menuitems" href="login.html">Login</a>
+<a class="menuitems"  href="register.html">Register</a>
+
+</nav>
+</div>
+<center>
+<fieldset>
+<legend align="center">SignUp</legend>
+
+<div class="box">
+<center>
+<form name="f1" method="post" action="UserRegister" onsubmit="validate();">
+
+
+<br>
+<table>
+   <tr>
+      <td>UserName:</td>
+      <td><input type="text" name="u_name" placeholder="UserName" required></td>
+   </tr>
+   <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" placeholder="Email" required></td>
+   </tr>
+   <tr>
+      <td>Phone:</td>
+      <td><input type="text" name="ph" placeholder="Phone Number" required></td>
+   </tr>
+   <tr>
+      <td>Gender:</td>
+      <td><input type="radio" name="g1" id="male" value="male">Male
+      <input type="radio" name="g1" id="female" value="female">Female</td>
+   </tr>
+   <tr>
+      <td>Password:</td>
+      <td><input type="password" name="pwd" placeholder="Password" required></td>
+   </tr>
+   <tr>
+      <td>Confirm Password:</td>
+      <td><input type="password" name="cpwd" placeholder="ConfirmPassword" required></td>
+   </tr>
+
+   <tr>
+      <td><input type="submit" value="SUBMIT"></td>
+      <td><input type="reset" value="RESET"></td>
+   </tr>
+</table>
+   
+</form>
+</center>
+</div>
+
+
+    </fieldset>
+</center>
+
+</body>
+
+</html>
+

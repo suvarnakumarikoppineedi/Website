@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="assets/jquery.min.js"></script>
+<style>
+	.menu{
+                
+		margin:auto;
+		width:100%;
+		height:100%;
+		
+		position:relative;
+	}
+	.icon{
+		border-radius:50%;
+		margin:20px;
+		
+	}
+	img{
+		display:inline-block;
+	}
+	.fin{
+                display:inline;
+                color:blue;
+
+		padding:5px;
+		position:absolute;
+		margin-left:-30px;
+		margin-top:28px;
+	}
+	nav{
+		display:inline;
+	}
+#fields{
+            background-color:lightyellow;
+            width:440px;
+            height:340px;
+            left:50px;
+            top:-20px;
+            position:absolute;
+            padding-top:20px;
+            margin-left:450px;
+            margin-top:180px;
+            border:2px solid green;
+            border-radius:7px;
+            box-shadow:5px 10px 20px 5px;
+}
+#legen{
+	
+	font-size:30px;
+	font-family:sans-serif;
+	background-color:dodgerblue;
+	border-radius:7px;
+	padding:10px;
+	
+}
+input{
+	
+	display:inline;
+	margin:15px;
+	padding:5px;
+	
+	border:0.5px solid black;
+	border-radius:3px;
+	background-color:rgba(255,255,255,0.1);
+	
+}
+#center{
+    display: none;
+}
+</style>
+
+<title>Insert title here</title>
+ <link rel="stylesheet" href="multimeadiacss.css">
+
+</head>
+<body>
+<header>
+<div style="background:#F1FCFB;">
+
+<span><img src="assets/logo.png" alt="Logo" width="150" height="60" style="display:inline;margin:auto;padding: 12px;"></span>
+<nav>
+<a href="#"><span class="menu"><img class="icon" src="assets/image.png" width="50px" height="50px"><p class="fin">Images</p></span></a>
+<a href="#"><span class="menu"><img class="icon" src="assets/video.png" width="50px" height="50px"><p class="fin">Videos</p></span></a>
+<a href="#"><span class="menu"><img class="icon" src="assets/files.png" width="50px" height="50px"><p class="fin">Audios</p></span></a>
+<a href="#"><span class="menu"><img class="icon" src="assets/files.png" width="50px" height="50px"><p class="fin">Audios</p></span></a>
+</nav>
+</div>
+
+</header>
+<main style="padding-top:100px;">
+<div id="left">hello</div>
+<div id="right">right
+    <div id="center">
+
+<fieldset id="fields">
+<legend align="center" id="legen" >ChooseFile</legend>
+<center>
+    <form name="choose" method="post" action="FileUpload" enctype="multipart/form-data" >
+
+<br>
+    
+<table>
+    <tr>
+        <td>
+          File Name:  
+        </td>
+        <td id="cont">
+        </td>
+    </tr>
+   <tr>
+      <td>Browse</td>
+      <td><input type="file" name="file1"></td>
+   </tr>
+   <tr>
+      <td><input type="submit" value="UPLOAD" id="jin"></td>
+      <td><input type="reset" value="RESET"></td>
+   </tr>
+</table>
+<input id="hidfile" type="hidden" name="ftype1" value="images">
+</form>
+</center>
+</fieldset>
+  
+    </div>
+<div id="middle">middle</div>
+<div id="bottom">bottom</div>
+
+</div>
+</main>
+<div id="bottom">
+ <footer>        
+<div class="meadia-upload">
+        <div class="align">
+            <a>
+                <div id="docs">
+                    <img  class="img" src="./assets/files.png" alt="Documents">
+                    <div class="txt-al">
+                        <p>documents</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="align">
+            <a>
+                <div id="images">
+                    <img class="img" src="./assets/image.png" alt="images">
+                    <div class="txt-al">
+                        <p>images</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="align">
+            <a>
+                <div id="videos">
+                    <img  class="img" src="./assets/video.png" alt="Videos">
+
+                    <div class="txt-al">
+                        <p>videos</p>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+       <div class="align">
+           <div class="sts"> <p>Uploaded Data Size:40%</p>
+                
+                <progress id="prg" value="40" max="100"></progress></div>
+
+
+        </div>
+    </div>
+    </footer>
+    </div>
+    <script>
+       
+        $(function(){
+            $(".align").click(function(){
+                var c=$.trim($(this).children().children().text());
+                $("#hidfile").val(c);
+                alert($("#hidfile").val())
+                $("#cont").html("&nbsp&nbsp&nbsp&nbsp<b>"+c+"</b>");
+                $("#center").show();
+                $("form").attr("action",'FileUpload?ftype='+c);
+                alert( $("form").attr("action"));
+            });
+        });
+    </script>
+</body>
+</html>
